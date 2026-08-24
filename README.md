@@ -6,6 +6,7 @@
 # 📚 Planejamento de Estudos
 
 ```
+<<<<<<< HEAD
 📦 Desenvolvimento Back-end com Node.js
 │
 │
