@@ -6,61 +6,88 @@
 # 📚 Planejamento de Estudos
 
 ```
-📦 Desenvolvimento Back-End em Python
-│
-├── 📚 Base: Fundamentos de Programação com Python 
-│   ├── Pensamento computacional: Fundamentos da computação e lógica de programação ✓
-│   └── Python: Crie a sua primeira aplicação ✓
+📦 Desenvolvimento Back-end com Node.js
 │
 │
-├── 💻 Nível 1: Estruturando Aplicações Web
-│   ├── Git e GitHub: compartilhando e colaborando em projetos ✓
-│   ├── Python: aplicando a Orientação a Objetos ✓
-│   ├── Python: avance na Orientação a Objetos e consuma API
-│   ├── Redes e Protocolos: fundamentos da web
-│   ├── Python: persistência de dados com arquivos, bancos de dados e APIs REST
-│   ├── Flask: desenvolvendo APIs e aplicações web com MongoDB
-│   ├── Django: templates e boas práticas
-│   ├── Django: persistência de dados e Admin
-│   ├── Django: autenticação de formulários e alerta
-│   ├── Django: autenticação com OAuth2.0
-│   ├── FastAPI e Python: construindo APIs com autenticação, banco de dados e deploy
-│   ├── Python: Fundamentos e Padrões de Arquitetura de Software
-│   ├── Princípios SOLID com Python: construindo códigos eficientes e escaláveis
-│   └── Desenvolvimento Back-end com IA: Fundamentos Práticos
+├── 📚 Base
+│   ├── Javascript: Aprendendo a programas
+│   └── Git Github: Compartilhando e colaborando projetos 
 │
 │
-├── 💻 Nível 2: Qualidade, Segurança e Escalabilidade
-│   ├── Django REST Framework: construindo APIs RESTful do Zero
-│   ├── Django REST Framework: Trabalhando com permissões, documentação, limitações, CORS e deploy na AWS
-│   ├── Django REST Framework: Trabalhando com validações, paginação, filtros e versionamento em uma API
-│   ├── Django REST Framework: trabalhando com testes unitários e de integração
-│   ├── Swagger: documentando suas APIs
-│   ├── Python: testes automatizados e qualidade de código
-│   ├── Design Patterns em Python: aplicação e melhores práticas
-│   ├── Microsserviços em Python: comunicação, testes e resiliência
-│   ├── Integração Contínua com Docker e GitHub Actions: do build ao deploy em nuvem
-│   ├── Integração Contínua: Pipeline de entrega e implementação contínua na EC2
-│   ├── Integração Contínua: automatize o deploy no Amazon ECS
-│   ├── Integração Contínua: Rollback e teste de carga
-│   ├── Python e OWASP: explorando vulnerabilidades e implementando defesas
-│   └── Desenvolvimento Back-end com IA: Práticas Avançadas e Integração [EM BREVE]
+│
+├── 📚 Nível 1: Contruindo APIs completas
+│   ├── Javascript com Node.js: Criando sua primeira biblioteca
+│   ├── Node.js: Criando API Rest com Express e MongoDB
+│   ├── Node.js: Lidando com buscas, filtros, paginação e erros em uma API
+│   ├── DevOps: Construido e gerindo containers com o Docker
+│   ├── ORM com Node.js: Desenvolvendo uma API com Sequelize e SQlite
+│   ├── ORM com Node.js: Avançando na funcionalidade do Sequelize
+│   ├── Swagger: Documentando APIs Rest com OpenAPI
+│   ├── Node.js: Implementando testes em uma API
+│   ├── Node.js: Melhorando o fluxo de desenvolvimento e integração de sua equipe
+│   ├── Cloud: Ralize o deplouy da aplicação da AWS
+│   ├── Node.js: Criando API Rest com autenticação, perfis de usuários e permissões
+│   ├── Node.js: Autenticação, Passport e OAuth2.0
+│   ├── WebSocket: Implemente comunicação em tempo real com o socket.IO e MongoDB
+│   ├── webScoket: Implemente autenticação e avance no socket.IO
+│   ├── Javascript: Programação Orintada a Objetos
+│   ├── Typescript: Construção de uma API com tipagem segura
+│   ├── SOLID com Typescript: Aplicando boas práticas em orientação a objetos
+│   ├── Typescript: Desenvolvendo tratamento de erros e validações
+│   ├── Padrões de projetos com Typescript: Aprimorando uma API com arquitetura limpa
+│   ├── Desenvolvimento Seguro: Lindando com erros e logs em uma aplicação
+│   ├── Nest.js: Persistindo dados com TypeORM e PostgreSQL
+│   ├── Nest.js: Lindando com migrações, relacionamentos ORM e erros em uma API
+│   ├── Nest.js: Adicionando funcionalidades com Redis, JWT e logging
+│   └── Desenvolvimento Back-end com IA: Fundamentos práticos
 │
 │
-└── 💻 Nível 3: Arquitetura, Desempenho e Deploy de Sistemas em Produção
-    ├── Domain-Driven Design em Python: da modelagem de domínio à arquitetura de sistemas
-    ├── Padrões de Integração em Sistemas Distribuídos
-    ├── Padrões arquiteturais de software: escala, resiliência e observabilidade
-    ├── Mensageria com Python e RabbitMQ: integração assíncrona entre serviços
-    ├── Mensageria com Python e Kafka: integração assíncrona em sistemas distribuídos
-    ├── Python: Otimização de desempenho e integração com C
-    ├── Kubernetes: Pods, Services e ConfigMaps
-    ├── Kubernetes: Deployments, Volumes e Escalabilidade
-    ├── Kubernetes: praticando e garantido uma aplicação com LivenessProbe
-    ├── Kubernetes com microsserviços: subindo e gerenciando uma aplicação
-    ├── Kubernetes: criando e gerenciando charts com o Helm
-    ├── Kubernetes: garantindo e protegendo a aplicação com o Istio
-    └── Integração Contínua: automatizando a entrega no Kubernetes
+│
+├── 📚 Nível 2:Banco de dados, performance. segurança e novos padroes de API
+│   ├── JavaScript I: Algoritmos de ordenação
+│   ├── Algoritmos com JavaScript II: Aprofundando em algoritmos de ordenação e busca
+│   ├── Node.js: Dominando filas, pilhas e estruturas de dados
+│   ├── PostgreSQL: Comandos DML e DDL
+│   ├── PostgreSQL: Administração e otimização do banco
+│   ├── MongoDB: Conhecendo um banco de dados NoSQL
+│   ├── MongoDB: Modelagem de dados
+│   ├── Desenvolvimento Seguro: Estratégias de segurança para dados de entrada
+│   ├── Desenvolvimento Seguro: Implementando Secret Scanning e SAST na esteira de CI
+│   ├── Desenvolvimento seguro com DAST e SCA: Protegendo as dependências e a aplicação em execução
+│   ├── Node.js: Dominando streams e processando arquivos pesados
+│   ├── Node.js: Gerenciando threads e processos
+│   ├── Graphql: Criando APIs baseadas em esquemas
+│   └── Desenvolvimento Back-end com IA: Práticas Avançadas e Integração [EM BREVE] 
+│
+│
+│
+└── 📚 Nível 3: Arquitetura de sistemas distribuídos
+    ├── Padrões arquiteturais de software: Escalas, resiliência e observabilidade
+    ├── Node.js: Clean code, arquitetura limpa e boas práticas
+    ├── DDD: Fundamentos do design orientado a domínio
+    ├── DDD: Modelagem estratégica de sistemas
+    ├── DDD: Aplicando padrões táticos
+    ├── Node.js: Arquitetura de monolito modular
+    ├── Node.js: Migração de monolito para microsserviços
+    ├── Node.js: Serviços RPC escaláveis e transmissão de dados
+    ├── Node.js: Desenvolvendo aplicações serverless na nuvem
+    └── Node.js: Mensageria e arquitetura orientada a eventos
+
+
+
+─── 💻 Liguagem de Programação Python
+    ├── Python: Crie sua primeira aplicação
+    ├── Python: Aplicando a Orientação a Objetos
+    ├── Python: Avance na Orientação a Objetos e consuma API
+    ├── Praticando Python: Condicionais if, elif e else
+    ├── Praticando Python: Laços for e while
+    ├── Praticando Python: Strings e Regex
+    ├── Praticando Python: Listas e tuplas
+    ├── Praticando Python: Conjuntos e dicionários
+    ├── Praticando Python: Funções
+    ├── Praticando Python: Porgramação Assíncrona
+    └── Praticando Python: Trabalhando com projetos
+
 
 ```
 
