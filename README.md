@@ -1,12 +1,12 @@
 <p align='center'>
-    <img src='https://capsule-render.vercel.app/api?type=waving&width=00&height=300&color=0:030391,100:a6b804&text=PYTHON&fontColor=FFFFFF&animation=twinkling&descAlign=50&descAlignY=50'/>
+    <img src='https://capsule-render.vercel.app/api?type=waving&width=00&height=300&color=0:0e9e00,100:042900&text=Back-end&fontColor=ffffff&animation=twinkling&descAlign=50&descAlignY=50'/>
 </p>
 
 
 # 📚 Planejamento de Estudos
 
 ```
-<<<<<<< HEAD
+
 📦 Desenvolvimento Back-end com Node.js
 │
 │
@@ -93,5 +93,5 @@
 ```
 
 <p align='center'>
-<img src='https://capsule-render.vercel.app/api?type=waving&height=300&color=0:030391,100:a6b804&text=PYTHON&fontColor=FFFFFF&animation=twinkling&descAlign=50&descAlignY=50&section=footer'/>
+<img src='https://capsule-render.vercel.app/api?type=waving&width=00&height=300&color=0:0e9e00,100:042900&text=Back-end&fontColor=ffffff&animation=twinkling&descAlign=50&descAlignY=50&section=footer'/>
 </p>
