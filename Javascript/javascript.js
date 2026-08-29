@@ -245,11 +245,27 @@ console.log(semDuplicatas)
 
 /*----------------------------------------------------------------------------------------------*/
 
+// Spread e Rest com Arrays
+// destructuring
 
+console.log('\n')
+console.log(frutas)
 
+const frutasClone = [...frutas, 'kiwi']
+console.log(frutasClone)
 
+const vegetais = ['tomate', 'alface', 'cenoura']
 
+const juntaTudo = [...frutas, ...vegetais]
 
+console.log(juntaTudo)
+
+const [primeiro, segundo, ...resto] = juntaTudo
+
+console.log('\n')
+console.log(primeiro)
+console.log(segundo)
+console.log(resto)
 
 /*----------------------------------------------------------------------------------------------*/
 
