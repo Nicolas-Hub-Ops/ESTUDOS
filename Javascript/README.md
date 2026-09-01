@@ -9,10 +9,85 @@
 | Pode mudar valor | ✅ | ✅ | ❌ |
 | Pode redeclarar | ✅ | ❌ | ❌ |
 | Escopo de bloco | ❌ | ✅ | ✅ |
+---
+### Exemplos:
 
+**Limitação de escopo**
+**Diferença entre `var` e `let`:**
+```
+
+	for(var i = 0; i <= 2; i++) {
+		console.log(i);
+	}
+	
+	console.log(i);
+
+	// Isso roda
+	// var não se limita ao escopo
+	
+	// Agora se:
+
+	for(let i = 0; i <= 2; i++) {
+		console.log(i);
+	}
+	
+	console.log(i);
+
+	// Isso dá erro no console.log fora do escopo
+	// let se limita ao escopo
+	
+```
+---
+**Redeclaração:**
+```
+
+	var a = 100;
+	var a = 200;
+	
+	// Isso roda
+	// var permite redeclaração
+	
+	// Agora se:
+
+	let b = 100;
+	let b = 200;
+	
+	// ou
+	
+	const c = 100;
+	const c = 200;
+	
+	// Isso dá erro
+	// let e const não permitem redeclaração
+	
+```
+---
+**Mudança de valor:**
+```
+
+	var a = 100;
+	a = 200;
+
+	// ou
+
+	let b = 100;
+	b = 200;
+	
+	// Isso roda
+	// var e let permitem mudança de valor
+	
+	// Agora se:
+	
+	const c = 100;
+	c = 200;
+	
+	// Isso dá erro
+	// const não permite mudança de valor
+	
+```
+---
 <br>
 
----
 
 <br>
 
@@ -26,19 +101,14 @@
 | `Boolean` | Verdadeiro ou falso | `true` |
 | `Undefined` | Valor não definido | `undefined` |
 | `Null` | Ausência de valor | `null` |
-| `Symbol` | Identificador único | `Symbol("id")` |
-| `Object` | Estrutura de dados | `{ nome: "Nicolas" }` |
+| `Object` | Estrutura de dados chave e valor | `{ nome: "Nicolas" }` |
 
 
 <br>
 
 ---
 
-<br>
-
-## 🔹 Operadores
-
-### Aritméticos
+## 🔹Operadores aritméticos
 
 | Operador | Função | Exemplo |
 |---|---|---|
@@ -53,7 +123,7 @@
 
 <br>
 
-### Comparação
+## 🔹Operadores de comparação
 
 | Operador | Função | Exemplo |
 |---|---|---|
@@ -68,7 +138,7 @@
 
 <br>
 
-### Unários
+## 🔹 Operadores unários
 
 | Operador | Função | Exemplo | Resultado |
 |---|---|---|---|
@@ -79,13 +149,12 @@
 | `!` | Inverte booleano | `!true` | `false` |
 | `typeof` | Retorna o tipo | `typeof "JS"` | `"string"` |
 
-<br>
 
 ---
 
 <br>
 
-# Condicionais
+## 🔹Condicionais
 
 | Estrutura | Função | Exemplo |
 |---|---|---|
@@ -95,13 +164,12 @@
 | `switch` | Compara um valor com diferentes casos | `switch (opcao)` |
 | `case` | Define um caso no `switch` | `case 1:` |
 
-<br>
 
 ---
 
 <br>
 
-# Laços de Repetição
+## 🔹 Laços de Repetição
 
 | Estrutura | Função | Exemplo |
 |---|---|---|
@@ -112,89 +180,74 @@
 | `for...in` | Percorre as propriedades de um objeto | `for (let chave in objeto)` |
 
 
+---
+
 <br>
+
+
+
+
+## 🔹Parâmetros e Argumentos
+
+<br>
+
+|Parâmetro| Argumento |
+|--|--|
+| Variáveis que a função recebe | Valores que são enviadas para a função quando é chamada |
+
+**Exemplos:**
+
+```
+
+	function soma(a, b) {	// A e B são parametros da função
+		return a + b;
+	};
+
+	soma(5, 10); // 5 e 10 são argumentos da função
+
+```
 
 ---
 
 <br>
 
-# Conceitos Importantes
-
-### Callback
-
-| Conceito | Descrição | Exemplo |
-|---|---|---|
-| `Callback` | Função passada como argumento para outra função | `executar(minhaFuncao)` |
+## 🔹Callback e HOF
 
 <br>
 
-### HOF (Higher-Order Function)
+|Callback| Higher-Order-Function |
+|--|--|
+| Função que é passada como argumento para outra função | Função que recebe ou retorna uma função |
 
-| Conceito | Descrição | Exemplo |
-|---|---|---|
-| `HOF` | Função que recebe ou retorna outra função | `function executar(fn) { fn(); }` |
+**Exemplos:**
 
-<br>
-
-### Spread Operator
-
-| Operador | Função | Exemplo |
-|---|---|---|
-| `...` | Expande elementos de arrays ou propriedades de objetos | `[...lista]` |
-
-**Exemplo:**
-
-```javascript
-const numeros = [1, 2, 3];
-
-const copia = [...numeros];
 ```
 
-```javascript
-const pessoa = {
-    nome: "Nicolas",
-    sobrenome: "Canabarro",
-};
+	function executar(acao) { // acao é parametro da função executar()
+		acao();
+	};
 
-const copia = {
-    ...pessoa,
-    idade: 21
-};
+	function saudacao() {
+		console.log('Olá');
+	};
+
+	executar(saudacao) // saudacao() é argumento da função executar()
+
+	// executar() é uma HOF 
+	// pois recebe uma função como argumento
+
+	// saudacao() é uma callback, 
+	// pois é passadda como argumento para a função executar()
+
 ```
+
+---
 
 <br>
 
-### Rest Operator
+## 🔹Spread Operator
 
-| Operador | Função | Exemplo |
-|---|---|---|
-| `...` | Agrupa os valores restantes em um array ou objeto | `const { nome, ...resto } = pessoa` |
+## 🔹Rest Operator
 
-**Exemplo:**
-
-```javascript
-const pessoa = {
-    nome: "Nicolas",
-    idade: 21,
-    cidade: "Brasília",
-    profissao: "Desenvolvedor"
-};
-
-const { nome, ...resto } = pessoa;
-
-console.log(nome);
-console.log(resto);
-```
-
-<br>
-
-### Destructuring
-
-| Sintaxe | Função | Exemplo |
-|---|---|---|
-| `{}` | Extrai propriedades de objetos | `const { nome } = pessoa` |
-| `[]` | Extrai valores de arrays | `const [a, b] = numeros` |
-
-
-
+## 🔹Destructuring
 
