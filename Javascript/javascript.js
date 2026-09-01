@@ -270,9 +270,11 @@ console.log(resto)
 /*----------------------------------------------------------------------------------------------*/
 
 
+function nomeDaFuncao(parametro) {
+    console.log(parametro)
+}
 
-
-
+nomeDaFuncao(argumento);
 
 
 
