@@ -9,9 +9,11 @@
 | Pode mudar valor | ✅ | ✅ | ❌ |
 | Pode redeclarar | ✅ | ❌ | ❌ |
 | Escopo de bloco | ❌ | ✅ | ✅ |
----
-### Exemplos:
 
+<br>
+
+### Exemplos:
+---
 **Limitação de escopo**
 **Diferença entre `var` e `let`:**
 ```
@@ -247,7 +249,130 @@
 
 ## 🔹Spread Operator
 
-## 🔹Rest Operator
+|Spread Operator| Explicação |
+|--|--|
+| `...` | Copia propriedades de um objeto ou elementos e um array  |
+
+### Exemplos
+---
+**Para objetos:**
+
+```
+
+	const usuario = {
+		nome: "Nicolas",
+		idade: 21
+	};
+	
+
+	const novoUsuario = {
+		...usuario,	// copia objeto usuario para o objeto atual
+		cidade: "Brasilia" // Adiciona uma nova chave valor ao objeto atual
+	};
+
+```
+---
+
+**Para arrays:**
+
+```
+
+	const frutas = ['maça', 'banana', 'uva'];
+
+	const novasFrutas = [
+		...frutas,	// copia o array frutas para o array atual
+		'manga',		// adiciona novos elementos ao array atual
+		'morango'
+	]
+
+```
+
+<br>
+
+## Rest Operator
+
+|Rest Operator| Explicação |
+|--|--|
+| `...` | Copia propriedades de um objeto ou elementos e um array  |
+
+### Exemplos
+---
+**Em funções:**
+
+```
+
+	function  somar(...numeros)  {
+		let  total  =  0;
+
+		for (const  numero  of  numeros) {
+			total  +=  numero;
+		}
+		return  total;
+	}
+
+	  
+
+	console.log(somar(100,  25,  30,  40,  0));
+
+```
+
+```
+
+	function  apresentar(nome, ...hobbies) { 
+		console.log(nome); 		
+		console.log(hobbies);  
+	} 
+
+	apresentar( 
+		"Nicolas", 
+		"Programar", 
+		"Jogar", 
+		"Ouvir música" 
+	);
+	
+	// nome: "Nicolas"
+	// hobbies: "Porgramar", "Ouvir música"
+
+
+```
+
+<br>
 
 ## 🔹Destructuring
 
+|Destructuring| Explicação |
+|--|--|
+| `{...} ou [...]` | Pega valores de um array ou objeto e nomeia automaticamente |
+
+### Exemplos:
+**Com objetos:**
+
+```
+
+	const usuario = {
+	    nome: "Nicolas",
+	    idade: 21,
+	    cidade: "Brasília"
+	};
+	
+	// Sem destructuring
+	
+	const nome = usuario.nome;
+	const idade = usuario.idade;
+
+
+	// Com destructuring
+	
+	const { nome, idade } = usuario;
+
+```
+
+
+**Com arrays:**
+```
+
+	const frutas = ['maça, 'banana', 'uva'];
+	
+	const [ primeiro, segundo  ] = frutas;
+
+```
