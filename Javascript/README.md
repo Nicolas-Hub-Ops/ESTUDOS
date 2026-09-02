@@ -103,6 +103,7 @@
 | `Boolean` | Verdadeiro ou falso | `true` |
 | `Undefined` | Valor não definido | `undefined` |
 | `Null` | Ausência de valor | `null` |
+| `Symbol` | identificado único | `Symbol('id')` |
 | `Object` | Estrutura de dados chave e valor | `{ nome: "Nicolas" }` |
 
 
@@ -120,8 +121,6 @@
 | `/` | Divisão | `10 / 5` |
 | `%` | Resto da divisão | `10 % 3` |
 | `**` | Exponenciação | `2 ** 3` |
-| `++` | Incremento | `x++` |
-| `--` | Decremento | `x--` |
 
 <br>
 
@@ -147,7 +146,7 @@
 | `++` | Incrementa 1 | `x++` | `x + 1` |
 | `--` | Decrementa 1 | `x--` | `x - 1` |
 | `+` | Converte para número | `+"10"` | `10` |
-| `-` | Inverte o sinal | `-10` | `-10` |
+| `-` | Inverte o sinal | `10` | `-10` |
 | `!` | Inverte booleano | `!true` | `false` |
 | `typeof` | Retorna o tipo | `typeof "JS"` | `"string"` |
 
@@ -293,7 +292,7 @@
 
 |Rest Operator| Explicação |
 |--|--|
-| `...` | Copia propriedades de um objeto ou elementos e um array  |
+| `...` | Reune valores restantes de uma variável |
 
 ### Exemplos
 ---
@@ -342,7 +341,7 @@
 
 |Destructuring| Explicação |
 |--|--|
-| `{...} ou [...]` | Pega valores de um array ou objeto e nomeia automaticamente |
+| `{...} ou [...]` | Permite extrair valores de objetos ou arrays e atribuí-los diretamente a variáveis |
 
 ### Exemplos:
 **Com objetos:**
