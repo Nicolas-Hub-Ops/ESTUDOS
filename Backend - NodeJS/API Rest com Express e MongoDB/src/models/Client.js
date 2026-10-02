@@ -1,4 +1,4 @@
-import mongoose from "mongoose"
+import mongoose from "mongoose";
 
 const clientSchema = new mongoose.Schema({
     id: {
