@@ -8,6 +8,7 @@ class DuplicateKey extends InternalError {
             error: 'Duplicate Key',
             code: 11000,
             key: err.keyValue,
+            err
         }
         super(400, message)
     }

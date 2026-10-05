@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const clientSchema = new mongoose.Schema({
+const customerSchema = new mongoose.Schema({
     id: {
         type: mongoose.Schema.Types.ObjectId,
     },
@@ -19,6 +19,6 @@ const clientSchema = new mongoose.Schema({
     },
 });
 
-const Client = mongoose.model('Clients', clientSchema);
+const Customer = mongoose.model('Customers', customerSchema);
 
-export default Client;
+export default Customer;

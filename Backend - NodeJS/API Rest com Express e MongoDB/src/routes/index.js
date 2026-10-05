@@ -1,5 +1,6 @@
 import express from 'express';
-import clientRoutes from './clientRoutes.js';
+import customerRoutes from './customerRoutes.js';
+import autoRoutes from './autoRoutes.js';
 
 const routes = (app) => {
     app.route('/')
@@ -8,7 +9,8 @@ const routes = (app) => {
         })
 
     app.use(express.json(),
-    clientRoutes,
+    customerRoutes,
+    autoRoutes,
     );
 };
 
