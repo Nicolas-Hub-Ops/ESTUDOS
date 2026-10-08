@@ -1,4 +1,4 @@
-import CustomerService from "../services/customerService.js";
+import customerService from "../services/customerService.js";
 
 function existsCustomer(res, customer, success) {
     if(customer === null || customer.length == '') {
@@ -15,10 +15,10 @@ function existsCustomer(res, customer, success) {
     };
 };
 
-class CustomerController {
+class customerController {
     static async getAllCustomers(req, res, next) {
         try {
-            const customers = await CustomerService.getAllCustomers();
+            const customers = await customerService.getAll();
             existsCustomer(res, customers, 'List of customers');
         } catch (error) {
             next(error);
@@ -27,7 +27,7 @@ class CustomerController {
 
     static async getCustomerById(req, res, next) {
         try {
-            const customer = await CustomerService.getCustomerById(req.params.id);
+            const customer = await customerService.getById(req.params.id);
             existsCustomer(res, customer, 'Customer by id found');
         } catch (error){
             next(error);
@@ -36,7 +36,7 @@ class CustomerController {
 
     static async getCustomerByFilter(req, res, next) {
         try {
-            const customers = await CustomerService.getCustomerByFilter(req.query);
+            const customers = await customerService.getByFilter(req.query);
             existsCustomer(res, customers, 'Customer by filter found');
         } catch (error) {
             next(error);
@@ -45,10 +45,11 @@ class CustomerController {
 
     static async createCustomer(req, res, next) {
         try {
-            const customer = await CustomerService.createCustomer(req.body);
+            const customer = await customerService.create(req.body);
             res.status(201).json({
                 status: 201,
                 message: 'Customer created successfully',
+                id: customer._id,
                 customer,
             });
         } catch (error) {
@@ -59,7 +60,7 @@ class CustomerController {
     static async updateCustomer(req, res) {
         try {
             const id = req.params.id;
-            const customer = await CustomerService.updateCustomer(id, req.body);
+            const customer = await customerService.update(id, req.body);
             existsCustomer(res, customer, 'Customer updated sucessfully');
         } catch (error) {
             next(error);
@@ -69,7 +70,7 @@ class CustomerController {
     static async deleteCustomer(req, res) {
         try {
             const id = req.params.id;
-            const customer = await CustomerService.deleteCustomer(id);
+            const customer = await customerService.delete(id);
             existsCustomer(res, customer, 'Customer deleted successfully');
         } catch (error) {
             next(error);
@@ -77,4 +78,4 @@ class CustomerController {
     };
 };
 
-export default CustomerController;
+export default customerController;

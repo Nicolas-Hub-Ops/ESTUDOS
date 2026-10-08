@@ -13,10 +13,15 @@ const customerSchema = new mongoose.Schema({
         required: [true, 'Email field is required'],
         unique: true,
     },
-    telephone: {
-        type: Number,
-        required: [true, 'Telephone field is required'],
-    },
+    //telephone: {
+    //    type: Number,
+    //    required: [true, 'Telephone field is required'],
+    //},
+    //cpf: {
+    //    type: String,
+    //    required: [true, 'CPF field is required'],
+    //    unique: true,
+    //},
 });
 
 const Customer = mongoose.model('Customers', customerSchema);

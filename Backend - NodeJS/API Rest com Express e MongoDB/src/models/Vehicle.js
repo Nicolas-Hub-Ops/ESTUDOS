@@ -1,8 +1,13 @@
 import mongoose from "mongoose";
 
-const autoSchema = new mongoose.Schema({
+const vehicleSchema = new mongoose.Schema({
     id: {
         type: mongoose.Schema.Types.ObjectId,
+    },
+    ownerId: {
+        type: mongoose.ObjectId,
+        ref: 'Customers',
+        required: [true, "Is necessary add owner this auto"],
     },
     model: {
         type: String,
@@ -20,14 +25,9 @@ const autoSchema = new mongoose.Schema({
     //color: {
     //    type: String,
     //}, 
-    ownerId: {
-        type: mongoose.ObjectId,
-        ref: 'Customers',
-        required: [true, "Is necessary add owner this auto"],
-    },
 
 });
 
-const Auto = mongoose.model('Autos', autoSchema);
+const Vehicle = mongoose.model('Vehicles', vehicleSchema);
 
-export default Auto;
+export default Vehicle;

@@ -1,6 +1,7 @@
 import express from 'express';
 import customerRoutes from './customerRoutes.js';
-import autoRoutes from './autoRoutes.js';
+import vehicleRoutes from './vehicleRoutes.js';
+import vehicleCustomerRoutes from './vehicleCustomerRoutes.js';
 
 const routes = (app) => {
     app.route('/')
@@ -10,7 +11,8 @@ const routes = (app) => {
 
     app.use(express.json(),
     customerRoutes,
-    autoRoutes,
+    vehicleRoutes,
+    vehicleCustomerRoutes
     );
 };
 

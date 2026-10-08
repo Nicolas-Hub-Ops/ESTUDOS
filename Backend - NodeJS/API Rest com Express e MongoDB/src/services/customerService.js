@@ -11,37 +11,37 @@ function processSearch(query) {
 
 };
 
-class CustomerService {
-    static async getAllCustomers() {
+class customerService {
+    static async getAll() {
         const customers = await Customer.find();
         return customers;
     };
 
-    static async getCustomerByFilter(query) {
+    static async getByFilter(query) {
         const filter = processSearch(query);
         const customers = await Customer.find(filter);
         return customers;
     }
 
-    static async getCustomerById(id) {
+    static async getById(id) {
         const customer = await Customer.findById(id);
         return customer;
     };
 
-    static async createCustomer(data) {
+    static async create(data) {
         const customer = await Customer.create(data);
         return customer;
     };
 
-    static async updateCustomer(id, data) {
+    static async update(id, data) {
         const customer = await Customer.findByIdAndUpdate(id, data);
         return customer;
     };
 
-    static async deleteCustomer(id) {
+    static async delete(id) {
         const customer = await Customer.findByIdAndDelete(id);
         return customer;
     };
 };
 
-export default CustomerService;
+export default customerService;
