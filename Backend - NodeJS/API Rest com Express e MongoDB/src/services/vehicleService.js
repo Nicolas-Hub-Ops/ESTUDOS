@@ -26,7 +26,8 @@ class vehicleService {
     };
 
     static async getByFilter(query) {
-        const filter = processSearch(query);
+        const fields = ['model', 'year', 'license', 'color'];
+        const filter = processSearch(query, fields);
         const vehicles = await Vehicle
             .find(filter)
             .populate('ownerId');

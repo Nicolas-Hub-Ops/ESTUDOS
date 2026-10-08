@@ -1,15 +1,15 @@
 import Customer from "../models/Customer.js";
+import processSearch from "../utils/processSearch.js";
 
-function processSearch(query) {
-    const { name, email } = query;
-    const objectFilter = {};
-
-    if(name) objectFilter.name = { $regex: name, $options: "i" }
-    if(email) objectFilter.email = { $regex: email, $options: "i" }
-
-    return objectFilter;
-
-};
+//function processSearch(query) {
+//    const { name, email } = query;
+//    const objectFilter = {};
+//
+//    if(name) objectFilter.name = { $regex: name, $options: "i" }
+//    if(email) objectFilter.email = { $regex: email, $options: "i" }
+//
+//    return objectFilter;
+//};
 
 class customerService {
     static async getAll() {
@@ -18,7 +18,8 @@ class customerService {
     };
 
     static async getByFilter(query) {
-        const filter = processSearch(query);
+        const fields = ['name', 'email']
+        const filter = processSearch(query, fields);
         const customers = await Customer.find(filter);
         return customers;
     }

@@ -1,25 +1,11 @@
 import customerService from "../services/customerService.js";
-
-function existsCustomer(res, customer, success) {
-    if(customer === null || customer.length == '') {
-        res.status(404).json({
-            status: 404,
-            message: "Customer not found",
-        });
-    } else {
-        res.status(200).json({
-            status: 200,
-            message: success,
-            customer,
-        });
-    };
-};
+import existsEntity from "../utils/validateEntity.js";
 
 class customerController {
     static async getAllCustomers(req, res, next) {
         try {
             const customers = await customerService.getAll();
-            existsCustomer(res, customers, 'List of customers');
+            existsEntity(res, customers, 'List of customers');
         } catch (error) {
             next(error);
         };
@@ -28,7 +14,7 @@ class customerController {
     static async getCustomerById(req, res, next) {
         try {
             const customer = await customerService.getById(req.params.id);
-            existsCustomer(res, customer, 'Customer by id found');
+            existsEntity(res, customer, 'Customer by id found');
         } catch (error){
             next(error);
         };
@@ -37,7 +23,7 @@ class customerController {
     static async getCustomerByFilter(req, res, next) {
         try {
             const customers = await customerService.getByFilter(req.query);
-            existsCustomer(res, customers, 'Customer by filter found');
+            existsEntity(res, customers, 'Customer by filter found');
         } catch (error) {
             next(error);
         };
@@ -61,7 +47,7 @@ class customerController {
         try {
             const id = req.params.id;
             const customer = await customerService.update(id, req.body);
-            existsCustomer(res, customer, 'Customer updated sucessfully');
+            existsEntity(res, customer, 'Customer updated sucessfully');
         } catch (error) {
             next(error);
         };
@@ -71,7 +57,7 @@ class customerController {
         try {
             const id = req.params.id;
             const customer = await customerService.delete(id);
-            existsCustomer(res, customer, 'Customer deleted successfully');
+            existsEntity(res, customer, 'Customer deleted successfully');
         } catch (error) {
             next(error);
         };

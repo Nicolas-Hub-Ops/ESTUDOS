@@ -1,5 +1,8 @@
 import customerService from "../services/customerService.js";
 import vehicleService from "../services/vehicleService.js";
+import vehicleCustomerService from "../services/vehicleCustomerService.js";
+import existsEntity from "../utils/validateEntity.js";
+
 
 class vehicleCustomerCotroller {
     static async createBoth(req, res, next) {
@@ -20,14 +23,12 @@ class vehicleCustomerCotroller {
     };
 
     static async deleteBoth(req, res, next) {
-        const customer = await customerService.delete(req.params.id);
-        const vehicle = await vehicleService.deleteByFilter({ "ownerId": null });
-        res.status(200).json({
-            status: 200,
-            message: 'Customer and vehicle by customer deleted successfully',
-            customer,
-            vehicle
-        })
+        try {
+            const deleteBoth = await vehicleCustomerService.deleteCustomerVehicle(req.params.id);
+            existsEntity(res, deleteBoth, "Customer and vehicles deleted")
+        } catch (error) {
+            next(error);
+        };
     };
 }
 
